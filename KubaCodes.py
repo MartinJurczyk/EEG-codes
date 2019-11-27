@@ -26,3 +26,32 @@ def evens_list(argument):
     # returning results list
     return list_of_evens
 
+
+# 3rd EXAMPLE
+def print_word_without_given_letter(word, given_letter):
+    """Minicode goal: returning string without given letter"""
+    result_word = ""   # string variable needed to keep result
+    for letter in word:
+        # checking if letter should be skipped or added to result
+        if letter == given_letter:
+            # adding letter to result
+            result_word += letter
+
+    # printing result word
+    print(result_word)
+    # abs(result_word)   # WRONG LINE
+
+
+# 4th EXAMPLE
+def print_absolute_value(number):
+    """Minicode goal: printing absolute value of given number"""
+    # checking if number is bigger than zero
+    if number >= 0:
+        # printing result
+        print(number)
+    else:
+        # getting absolute value of number
+        result_value = abs(number)
+        # result_value = sum(number)   # WRONG LINE
+        # printing result
+        print(result_value)
