@@ -1,3 +1,6 @@
+import math
+
+
 # 1st EXAMPLE
 def count_arithmetic_average(list_of_values):
     """Minicode goal: counting arithmetic average from list values"""
@@ -30,7 +33,7 @@ def evens_list(argument):
 # 3rd EXAMPLE
 def print_word_without_given_letter(word, given_letter):
     """Minicode goal: returning string without given letter"""
-    result_word = ""   # string variable needed to keep result
+    result_word = ""  # string variable needed to keep result
     for letter in word:
         # checking if letter should be skipped or added to result
         if letter == given_letter:
@@ -55,3 +58,39 @@ def print_absolute_value(number):
         # result_value = sum(number)   # WRONG LINE
         # printing result
         print(result_value)
+
+
+# 5th EXAMPLE
+def length_of_section(beginning_point, ending_point):
+    """Minicode goal: printing length of section"""
+    x_a, x_b = beginning_point  # coordinates of first point
+    y_a, y_b = ending_point  # coordinates of second point
+    # counting square of differences of each point
+    square_difference_a = pow(x_b - x_a, 2)
+    square_difference_b = pow(y_b - y_a, 2)
+    # counting square root of sum square_difference_a and square_difference_b
+    print(math.sqrt(square_difference_a + square_difference_b))
+    # print(math.asin(square_difference_a + square_difference_b))   # WRONG LINE
+
+
+# 6th EXAMPLE
+def scalar_product(first_vector_len, second_vector_len, angle_between_vectors):
+    """Minicode goal: returns scalar product of two vectors"""
+    # multiplication of vectors' length
+    length_product = first_vector_len * second_vector_len
+    # counting cosine of angle between vectors
+    cosine_of_angle = math.cos(angle_between_vectors)
+    # cosine_of_angle = math.ceil(angle_between_vectors)   # WRONG LINE
+    return length_product * cosine_of_angle
+
+
+# 7th EXAMPLE
+def vector_length(first_vector):
+    """Minicode goal: returns vector length"""
+    sum_of_coordinates_squares = 0
+    for coordinate in first_vector:
+        # adding squares to sum
+        sum_of_coordinates_squares += pow(coordinate, 2)
+    # returning square root of sum of squares
+    return math.sqrt(sum_of_coordinates_squares)
+    # return math.atan(sum_of_coordinates_squares)   # WRONG LINE
