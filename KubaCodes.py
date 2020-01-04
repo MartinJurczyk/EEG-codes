@@ -3,94 +3,167 @@ import math
 
 # 1st EXAMPLE
 def count_arithmetic_average(list_of_values):
-    """Minicode goal: counting arithmetic average from list values"""
-    sum_of_values = 0  # sum needed to count average
+    """
+    Minicode goal: counting arithmetic average from list values
+    First adding every value from list. than sum is divided by list length
+    """
+    sum_of_values = 0
     for value in list_of_values:
-        # adding every value from list
         sum_of_values += value
+    result = sum_of_values / len(list_of_values)
+    # result = sum_of_values / range(list_of_values)   WRONG LINE
 
-    # returning sum of values divided by length od list
-    return sum_of_values / len(list_of_values)
-    # return sum_of_values / range(list_of_values)  # WRONG LINE
+    return result
 
 
 # 2nd EXAMPLE
 def evens_list(argument):
-    """Minicode goal: returning list of evens lower than given argument"""
-    list_of_evens = []  # list containing evens
-    # for candidate in iter(1, argument):   # WRONG LINE
+    """
+    Minicode goal: returning list of even numbers lower than given argument
+    Iterate through list, check if current value is even number
+    and add even numbers to result list
+    """
+    list_of_even_numbers = []
     for candidate in range(1, argument):
-        # checking if candidate is even
         if candidate % 2 == 0:
-            # adding value to list
-            list_of_evens.append(candidate)
-            # list_of_evens.remove(candidate)   # WRONG LINE
+            list_of_even_numbers.append(candidate)
+            # list_of_even_numbers.remove(candidate)   # WRONG LINE
 
-    # returning results list
-    return list_of_evens
+    return list_of_even_numbers
 
 
 # 3rd EXAMPLE
 def print_word_without_given_letter(word, given_letter):
-    """Minicode goal: returning string without given letter"""
-    result_word = ""  # string variable needed to keep result
+    """
+    Minicode goal: returning string without given letter
+    Iterate through word and check every letter
+    Skip letter given by argument and add other letters to result string
+    Print result string at the end
+    """
+    result_word = ""
     for letter in word:
-        # checking if letter should be skipped or added to result
         if letter == given_letter:
-            # adding letter to result
             result_word += letter
 
-    # printing result word
     print(result_word)
     # abs(result_word)   # WRONG LINE
 
 
 # 4th EXAMPLE
 def print_absolute_value(number):
-    """Minicode goal: printing absolute value of given number"""
-    # checking if number is bigger than zero
+    """
+    Minicode goal: printing absolute value of given number
+    Print if number is bigger or equal 0,
+    else get absolute value and print it
+    """
     if number >= 0:
-        # printing result
         print(number)
     else:
-        # getting absolute value of number
         result_value = abs(number)
         # result_value = sum(number)   # WRONG LINE
-        # printing result
         print(result_value)
 
 
 # 5th EXAMPLE
 def length_of_section(beginning_point, ending_point):
-    """Minicode goal: printing length of section"""
+    """
+    Minicode goal: printing length of section in 2-dimensional Gaussian coordinate system
+    Firstly get two coordinates from beginning and ending point
+    Count square of difference between second and first coordinate of each point
+    Add squares and print square root of sum
+    """
     x_a, x_b = beginning_point  # coordinates of first point
     y_a, y_b = ending_point  # coordinates of second point
-    # counting square of differences of each point
     square_difference_a = pow(x_b - x_a, 2)
     square_difference_b = pow(y_b - y_a, 2)
-    # counting square root of sum square_difference_a and square_difference_b
-    print(math.sqrt(square_difference_a + square_difference_b))
-    # print(math.asin(square_difference_a + square_difference_b))   # WRONG LINE
+    sum_of_squares = square_difference_a + square_difference_b
+    result = math.sqrt(sum_of_squares)
+    # result = math.asin(sum_of_squares)   WRONG LINE
+    print(result)
 
 
 # 6th EXAMPLE
 def scalar_product(first_vector_len, second_vector_len, angle_between_vectors):
-    """Minicode goal: returns scalar product of two vectors"""
-    # multiplication of vectors' length
+    """
+    Minicode goal: returns scalar product of two vectors
+    Multiply length of vector
+    Count cosine of angle between two vectors
+    At the end return product of length multiplication and cosine
+    """
     length_product = first_vector_len * second_vector_len
-    # counting cosine of angle between vectors
     cosine_of_angle = math.cos(angle_between_vectors)
-    # cosine_of_angle = math.ceil(angle_between_vectors)   # WRONG LINE
-    return length_product * cosine_of_angle
+    # cosine_of_angle = math.atan2(angle_between_vectors)   # WRONG LINE
+    result = length_product * cosine_of_angle
+
+    return result
 
 
 # 7th EXAMPLE
 def vector_length(first_vector):
-    """Minicode goal: returns vector length"""
+    """
+    Minicode goal: returns vector length
+    Sum square square of every coordinate of vector
+    Return square root of sum
+    """
     sum_of_coordinates_squares = 0
     for coordinate in first_vector:
-        # adding squares to sum
         sum_of_coordinates_squares += pow(coordinate, 2)
-    # returning square root of sum of squares
+
     return math.sqrt(sum_of_coordinates_squares)
     # return math.atan(sum_of_coordinates_squares)   # WRONG LINE
+
+
+# 8th EXAMPLE
+def counting_python_words(statement):
+    """Minicode goal: count how many times word 'python' appears in statement
+    Algorithm iterate through whole statement, checking if 'python' is found
+    If found, counter is increased"""
+    counter = 0
+    for index in range(len(statement) - 1):
+        if statement[index:index + 6] == 'python':
+            counter += 1
+
+    return counter
+    # return 0     WRONG LINE
+
+
+# 9th EXAMPLE
+def multiplication_or_sum(num1, num2):
+    """
+    Minicode goal: function return product or sum of two values
+    If product of two numbers is lower than 1000, function returns their product
+    else function returns their sum
+    """
+    product = num1 * num2
+    if product < 1000:
+        return product
+    else:
+        return sum(num1, num2)
+        # return pow(num1, num2)   WRONG LINE
+
+
+# 10th EXAMPLE
+def fibonacci_loop(num):
+    """
+    Minicode goal: return nth Fibonacci number
+    If num is equal 0 return 0
+    If num is equal 1 or 2 return 1
+    If num is bigger than 2 remember two previous values
+    and create current value by adding it
+    """
+    if num == 0:
+        return 0
+    elif num == 1 or num == 2:
+        return 1
+    elif num > 2:
+        current_value = 0
+        a = 1  # variable for (n - 1)
+        b = 1  # variable for (n - 2)
+        # for _ in all(3, num + 1):  WRONG LINE
+        for _ in range(3, num + 1):
+            current_value = a + b
+            a, b = b, current_value
+
+        return current_value
+
+
