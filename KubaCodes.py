@@ -3,10 +3,8 @@ import math
 
 # 1st EXAMPLE
 def count_arithmetic_average(list_of_values):
-    """
-    Minicode goal: counting arithmetic average from list values
-    First adding every value from list. than sum is divided by list length
-    """
+    """Minicode goal: counting arithmetic average from list values
+    First adding every value from list. than sum is divided by list length"""
     sum_of_values = 0
     for value in list_of_values:
         sum_of_values += value
@@ -18,11 +16,9 @@ def count_arithmetic_average(list_of_values):
 
 # 2nd EXAMPLE
 def evens_list(argument):
-    """
-    Minicode goal: returning list of even numbers lower than given argument
+    """Minicode goal: returning list of even numbers lower than given argument
     Iterate through list, check if current value is even number
-    and add even numbers to result list
-    """
+    and add even numbers to result list"""
     list_of_even_numbers = []
     for candidate in range(1, argument):
         if candidate % 2 == 0:
@@ -34,12 +30,10 @@ def evens_list(argument):
 
 # 3rd EXAMPLE
 def print_word_without_given_letter(word, given_letter):
-    """
-    Minicode goal: returning string without given letter
+    """Minicode goal: returning string without given letter
     Iterate through word and check every letter
     Skip letter given by argument and add other letters to result string
-    Print result string at the end
-    """
+    Print result string at the end"""
     result_word = ""
     for letter in word:
         if letter == given_letter:
@@ -51,11 +45,9 @@ def print_word_without_given_letter(word, given_letter):
 
 # 4th EXAMPLE
 def print_absolute_value(number):
-    """
-    Minicode goal: printing absolute value of given number
+    """Minicode goal: printing absolute value of given number
     Print if number is bigger or equal 0,
-    else get absolute value and print it
-    """
+    else get absolute value and print it"""
     if number >= 0:
         print(number)
     else:
@@ -66,12 +58,10 @@ def print_absolute_value(number):
 
 # 5th EXAMPLE
 def length_of_section(beginning_point, ending_point):
-    """
-    Minicode goal: printing length of section in 2-dimensional Gaussian coordinate system
+    """Minicode goal: printing length of section in 2-dimensional Gaussian coordinate system
     Firstly get two coordinates from beginning and ending point
     Count square of difference between second and first coordinate of each point
-    Add squares and print square root of sum
-    """
+    Add squares and print square root of sum"""
     x_a, x_b = beginning_point  # coordinates of first point
     y_a, y_b = ending_point  # coordinates of second point
     square_difference_a = pow(x_b - x_a, 2)
@@ -84,12 +74,10 @@ def length_of_section(beginning_point, ending_point):
 
 # 6th EXAMPLE
 def scalar_product(first_vector_len, second_vector_len, angle_between_vectors):
-    """
-    Minicode goal: returns scalar product of two vectors
+    """Minicode goal: returns scalar product of two vectors
     Multiply length of vector
     Count cosine of angle between two vectors
-    At the end return product of length multiplication and cosine
-    """
+    At the end return product of length multiplication and cosine"""
     length_product = first_vector_len * second_vector_len
     cosine_of_angle = math.cos(angle_between_vectors)
     # cosine_of_angle = math.atan2(angle_between_vectors)   # WRONG LINE
@@ -100,11 +88,9 @@ def scalar_product(first_vector_len, second_vector_len, angle_between_vectors):
 
 # 7th EXAMPLE
 def vector_length(first_vector):
-    """
-    Minicode goal: returns vector length
+    """Minicode goal: returns vector length
     Sum square square of every coordinate of vector
-    Return square root of sum
-    """
+    Return square root of sum"""
     sum_of_coordinates_squares = 0
     for coordinate in first_vector:
         sum_of_coordinates_squares += pow(coordinate, 2)
@@ -129,11 +115,9 @@ def counting_python_words(statement):
 
 # 9th EXAMPLE
 def multiplication_or_sum(num1, num2):
-    """
-    Minicode goal: function return product or sum of two values
+    """Minicode goal: function return product or sum of two values
     If product of two numbers is lower than 1000, function returns their product
-    else function returns their sum
-    """
+    else function returns their sum"""
     product = num1 * num2
     if product < 1000:
         return product
@@ -144,13 +128,11 @@ def multiplication_or_sum(num1, num2):
 
 # 10th EXAMPLE
 def fibonacci_loop(num):
-    """
-    Minicode goal: return nth Fibonacci number
+    """Minicode goal: return nth Fibonacci number
     If num is equal 0 return 0
     If num is equal 1 or 2 return 1
     If num is bigger than 2 remember two previous values
-    and create current value by adding it
-    """
+    and create current value by adding it"""
     if num == 0:
         return 0
     elif num == 1 or num == 2:
@@ -169,10 +151,8 @@ def fibonacci_loop(num):
 
 # 11th EXAMPLE
 def create_tuple(csv_argument):
-    """
-    Minicode goal: return tuple created from comma separated values given as argument
-    Split values and create tuple that contains them
-    """
+    """Minicode goal: return tuple created from comma separated values given as argument
+    Split values and create tuple that contains them"""
     split_values = csv_argument.split(",")
     result_tuple = tuple(split_values)
     # result_tuple = dict(split_values)   WRONG LINE
@@ -182,10 +162,8 @@ def create_tuple(csv_argument):
 
 # 12th EXAMPLE
 def find_lowercase(statement):
-    """
-    Minicode goal: check if lowercase letter appear in statement
-    Iterate through statement and check every letter
-    """
+    """Minicode goal: check if lowercase letter appear in statement
+    Iterate through statement and check every letter"""
     for letter in statement:
         # if letter.isupper():   WRONG LINE
         if letter.islower():
@@ -196,10 +174,8 @@ def find_lowercase(statement):
 
 # 13th EXAMPLE
 def check_divisibility_by_3_and_5(number):
-    """
-    Minicode goal: check if 3 and 5 divide given number
-    If both divide number return True, else return False
-    """
+    """Minicode goal: check if 3 and 5 divide given number
+    If both divide number return True, else return False"""
     if number % 3 is 0:
         pass
     else:
@@ -216,10 +192,8 @@ def check_divisibility_by_3_and_5(number):
 
 # 14th EXAMPLE
 def char_frequency(word):
-    """
-    Minicode goal: count the number of characters in string
-    Put every specific letter and number of their appearances in the dictionary
-    """
+    """Minicode goal: count the number of characters in string
+    Put every specific letter and number of their appearances in the dictionary"""
     dict_of_letters = {}
     for n in word:
         keys = dict_of_letters.keys()
@@ -243,3 +217,67 @@ def capitalise_krakow(input_list):
         result_list.append(word)
 
     return result_list
+
+
+# 16th EXAMPLE
+def replace_first_char_by_last(word):
+    """Minicode goal: replace every occurrence of first character in word by last character"""
+    first_character = word[0]
+    last_character = word[len(word) - 1]
+    result_word = word.replace(first_character, last_character)
+    # result_word = word.startswith(first_character, last_character)  WRONG LINE
+
+    return result_word
+
+
+# 17th EXAMPLE
+def remove_digits_from_list(list_of_strings):
+    """Minicode goal: remove every string from list that is digit"""
+    for elem in list_of_strings:
+        if elem.isdigit():
+            list_of_strings.remove(elem)
+            # list_of_strings.extend(elem)   WRONG LINE
+
+    return list_of_strings
+
+
+# 18th EXAMPLE
+def lowercase_first_n_chars(word, n):
+    """Minicode goal: return word with first n letters lowercase"""
+    result_word = ''
+    for index in range(len(word)):
+        if index < n:
+            result_word += word[index].lower()
+            # word[index].upper()   WRONG LINE
+        else:
+            result_word += word[index]
+
+    return result_word
+
+
+# 19th EXAMPLE
+def find_biggest_length_of_word(words_list):
+    """Minicode goal: return biggest length of word from list
+    Create list with lengths of every word from input list
+    Than find maximal value in list of word lengths"""
+    word_lengths = []
+    for word in words_list:
+        word_lengths.append(len(word))
+    biggest_length = max(word_lengths)
+    # biggest_length = min(word_lengths)  WRONG LINE
+
+    return biggest_length
+
+
+# 20th EXAMPLE
+def find_dividers(number):
+    """Minicode goal: return list of every divider of given number"""
+    list_of_dividers = []
+    for i in range(number + 1):
+        if i == 0:
+            pass
+        elif number % i == 0:
+            list_of_dividers.append(i)
+            # list_of_dividers.remove(i)   WRONG LINE
+
+    return list_of_dividers
