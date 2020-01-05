@@ -110,7 +110,7 @@ def vector_length(first_vector):
         sum_of_coordinates_squares += pow(coordinate, 2)
 
     return math.sqrt(sum_of_coordinates_squares)
-    # return math.atan(sum_of_coordinates_squares)   # WRONG LINE
+    # return math.cos(sum_of_coordinates_squares)   # WRONG LINE
 
 
 # 8th EXAMPLE
@@ -167,3 +167,79 @@ def fibonacci_loop(num):
         return current_value
 
 
+# 11th EXAMPLE
+def create_tuple(csv_argument):
+    """
+    Minicode goal: return tuple created from comma separated values given as argument
+    Split values and create tuple that contains them
+    """
+    split_values = csv_argument.split(",")
+    result_tuple = tuple(split_values)
+    # result_tuple = dict(split_values)   WRONG LINE
+
+    return result_tuple
+
+
+# 12th EXAMPLE
+def find_lowercase(statement):
+    """
+    Minicode goal: check if lowercase letter appear in statement
+    Iterate through statement and check every letter
+    """
+    for letter in statement:
+        # if letter.isupper():   WRONG LINE
+        if letter.islower():
+            return True
+
+    return False
+
+
+# 13th EXAMPLE
+def check_divisibility_by_3_and_5(number):
+    """
+    Minicode goal: check if 3 and 5 divide given number
+    If both divide number return True, else return False
+    """
+    if number % 3 is 0:
+        pass
+    else:
+        return False
+
+    # if number % 5 are 0:  WRONG LINE
+    if number % 5 is 0:
+        pass
+    else:
+        return False
+
+    return True
+
+
+# 14th EXAMPLE
+def char_frequency(word):
+    """
+    Minicode goal: count the number of characters in string
+    Put every specific letter and number of their appearances in the dictionary
+    """
+    dict_of_letters = {}
+    for n in word:
+        keys = dict_of_letters.keys()
+        # keys = dict_of_letters.items()   WRONG LINE
+        if n in keys:
+            dict_of_letters[n] += 1
+        else:
+            dict_of_letters[n] = 1
+
+    return dict_of_letters
+
+
+# 15th EXAMPLE
+def capitalise_krakow(input_list):
+    """Minicode goal: capitalise every 'krakow' occurrence in input_list"""
+    result_list = []
+    for word in input_list:
+        if word == 'krakow':
+            word = word.capitalize()
+            # word = word.lower()   WRONG LINE
+        result_list.append(word)
+
+    return result_list
