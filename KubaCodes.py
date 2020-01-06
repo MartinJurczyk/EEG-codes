@@ -281,3 +281,69 @@ def find_dividers(number):
             # list_of_dividers.remove(i)   WRONG LINE
 
     return list_of_dividers
+
+
+# 21th EXAMPLE
+def delete_duplicates(list_with_dups):
+    """Minicode goal: delete all duplicates from list
+    Use set to put there every unique value
+    Skip value that already is in the set"""
+    unique_items = set()
+    for x in list_with_dups:
+        if x not in unique_items:
+            unique_items.add(x)
+            # unique_items.remove(x)   WRONG LINE
+
+    return unique_items
+
+
+# 22th EXAMPLE
+def reversed_without_a(word):
+    """Minicode goal: return reversed word without a letter
+    Firstly remove letter a, than iterate through reversed word and create reversed result"""
+    word = word.replace('a', '')
+    result_word = ''
+    # for letter in sorted(word):   WRONG LINE
+    for letter in reversed(word):
+        result_word += letter
+
+    return result_word
+
+
+# 23th EXAMPLE
+def find_list_in_list(input_list):
+    """Minicode goal: check if list contains list
+    Iterate through list and check if any element is list"""
+    for elem in input_list:
+        # if issubclass(elem, list):   WRONG LINE
+        if isinstance(elem, list):
+            return True
+
+    return False
+
+
+# 24th EXAMPLE
+def find_gmail_address(list_of_addresses):
+    """Minicode goal: find gmail addresses
+    Iterate through list and find every address that ends with 'gmail.com'"""
+    gmail_addresses = []
+    for address in list_of_addresses:
+        # if address.startsswith('gmail.com'):   WRONGLINE
+        if address.endswith('gmail.com'):
+            gmail_addresses.append(address)
+
+    return gmail_addresses
+
+
+# 25th EXAMPLE
+def convert_into_one_integer(list_of_ints):
+    """Minicode goal: return one integer combined from integers from list
+    Iterate over the list and convert every integer to string and add to one string
+    Return combined string of integers as integer"""
+    combined_integers = ''
+    for integer in list_of_ints:
+        combined_integers += str(integer)
+    result_int = int(combined_integers)
+    # result_int = tuple(combined_integers)  WRONG LINE
+
+    return result_int
