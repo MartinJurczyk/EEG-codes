@@ -114,16 +114,14 @@ def counting_python_words(statement):
 
 
 # 9th EXAMPLE
-def multiplication_or_sum(num1, num2):
-    """Minicode goal: function return product or sum of two values
-    If product of two numbers is lower than 1000, function returns their product
-    else function returns their sum"""
+def return_bigger(num1, num2):
+    """Minicode goal: function return bigger of product or sum of two given values
+    Count product and sum of two values and return bigger of them"""
     product = num1 * num2
-    if product < 1000:
-        return product
-    else:
-        return sum(num1, num2)
-        # return pow(num1, num2)   WRONG LINE
+    sum = sum(num1, num2)
+
+    return max(product, sum)
+    # return len(product, sum)   WRONG LINE
 
 
 # 10th EXAMPLE
@@ -181,9 +179,9 @@ def check_divisibility_by_3_and_5(number):
     else:
         return False
 
-    # if number % 5 are 0:  WRONG LINE
     if number % 5 is 0:
         pass
+        # assert   WRONG LINE
     else:
         return False
 
@@ -208,7 +206,9 @@ def char_frequency(word):
 
 # 15th EXAMPLE
 def capitalise_krakow(input_list):
-    """Minicode goal: capitalise every 'krakow' occurrence in input_list"""
+    """Minicode goal: capitalise every 'krakow' occurrence in input_list
+    Iterate through list and and capitalise every 'krakow' occurrence
+    At last return list with corrected words"""
     result_list = []
     for word in input_list:
         if word == 'krakow':
@@ -315,7 +315,7 @@ def reversed_without_a(word):
 
 # 23th EXAMPLE
 def find_list_in_list(input_list):
-    """Minicode goal: check if list contains list
+    """Minicode goal: check if list contains any list
     Iterate through list and check if any element is list"""
     for elem in input_list:
         # if issubclass(elem, list):   WRONG LINE
