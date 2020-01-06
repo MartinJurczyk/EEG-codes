@@ -270,17 +270,20 @@ def find_biggest_length_of_word(words_list):
 
 
 # 20th EXAMPLE
-def find_dividers(number):
-    """Minicode goal: return list of every divider of given number"""
-    list_of_dividers = []
-    for i in range(number + 1):
-        if i == 0:
-            pass
-        elif number % i == 0:
-            list_of_dividers.append(i)
-            # list_of_dividers.remove(i)   WRONG LINE
+def compute_greatest_common_divisor(x, y):
+    """Minicode goal: find greatest common divisor
+    Firstly find smaller from two given numbers
+    Then iterate from 1 to smaller value
+    If current value divide both given numbers, save it
+    Iterate through whole range and return latest founded value"""
+    greatest_common_divisor = 0
+    smaller = min(x, y)
+    # for i in input(1, smaller + 1):   WRONG LINE
+    for i in range(1, smaller + 1):
+        if (x % i == 0) and (y % i == 0):
+            greatest_common_divisor = i
 
-    return list_of_dividers
+    return greatest_common_divisor
 
 
 # 21th EXAMPLE
@@ -347,3 +350,74 @@ def convert_into_one_integer(list_of_ints):
     # result_int = tuple(combined_integers)  WRONG LINE
 
     return result_int
+
+
+# 26th EXAMPLE
+def merge_dicts(dict_1, dict_2, dict_3):
+    """Minicode goal: merge 3 dicts into one"""
+    merged_dict = {}
+    for dict in (dict_1, dict_2, dict_3):
+        merged_dict.update(dict)
+        # merged_dict.clear(dict)   WRONG LINE
+
+    return merged_dict
+
+
+# 27th EXAMPLE
+def highest_sum(list_of_list):
+    """Minicode goal: find highest sum of ints in list
+    Iterate through lists and save every list sum
+    Than find maximal value and return it"""
+    list_of_sums = []
+    for list in list_of_list:
+        sum_of_list = sum(list)
+        list_of_sums.append(sum_of_list)
+    maximal_value = max(list_of_sums)
+    # maximal_value = sum(list_of_sums)   WRONG LINE
+
+    return maximal_value
+
+
+# 28th EXAMPLE
+def compute_least_common_multiple(x, y):
+    """Minicode goal: find lowest common multiple
+    Firstly find greater from two given values
+    Then check if this value is divided by both given numbers
+    If not increment it and check till condition will be fulfilled
+    If yes return this value"""
+    greater = max(x, y)
+    while True:
+        if greater % x == 0 and greater % y == 0:
+            least_common_multiple = greater
+            break
+        greater += 1
+        # greater += 0   WRONG LINE
+
+    return least_common_multiple
+
+
+# 29th EXAMPLE
+def find_dividers(number):
+    """Minicode goal: return list of every divider of given number"""
+    list_of_dividers = []
+    for i in range(number + 1):
+        if i == 0:
+            pass
+        elif number % i == 0:
+            list_of_dividers.append(i)
+            # list_of_dividers.remove(i)   WRONG LINE
+
+    return list_of_dividers
+
+
+# 30th EXAMPLE
+def print_numbers(number):
+    """Minicode goal: print numbers from 0 to given number included"""
+    x = 0
+    while True:
+        if x <= number:
+            print(x)
+            # compile(x)   WRONG LINE
+            x += 1
+        else:
+            break
